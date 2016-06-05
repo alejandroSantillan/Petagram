@@ -1,4 +1,4 @@
-package alejandro.com.petagram;
+package alejandro.com.petagram.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -10,6 +10,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
+
+import alejandro.com.petagram.R;
+import alejandro.com.petagram.pojo.Mascota;
 
 /**
  * Created by Alejandro on 28/05/2016.

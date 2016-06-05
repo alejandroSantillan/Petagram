@@ -3,4 +3,19 @@
     <string name="nombre_mascota">nombre mascota</string>
     <string name="numero_rating">5</string>
     <string name="favoritos">Favoritos</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_contact">Contacto</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombreDesarrollador">Alejandro Santillán Macotela</string>
+    <string name="profesion">Profesión</string>
+    <string name="nombreProfesion">Ing. Sistemas Computacionales</string>
+    <string name="pais">País</string>
+    <string name="nombrePais">México</string>
+    <string name="correo">Correo Electrónico</string>
+    <string name="mensaje">mensaje</string>
+    <string name="enviar">Enviar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gato">GATO</string>
 </resources>

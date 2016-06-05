@@ -10,9 +10,17 @@
         <item name="android:textColorSecondary">@color/colorSecondaryText</item>
         <item name="android:divider">@color/divider</item>
         <item name="android:icon">@color/icons</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.Petagram.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <style name="Theme.Petagram.Boton" parent="Theme.Petagram">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimaryLight</item>
+
+    </style>
 
 </resources>

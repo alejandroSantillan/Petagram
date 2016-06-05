@@ -1,4 +1,4 @@
-package alejandro.com.petagram;
+package alejandro.com.petagram.pojo;
 
 /**
  * Created by Alejandro on 28/05/2016.

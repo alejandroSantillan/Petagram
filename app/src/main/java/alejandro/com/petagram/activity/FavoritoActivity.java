@@ -1,4 +1,4 @@
-package alejandro.com.petagram;
+package alejandro.com.petagram.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,10 @@ import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import alejandro.com.petagram.adapter.MascotaAdapter;
+import alejandro.com.petagram.R;
+import alejandro.com.petagram.pojo.Mascota;
 
 public class FavoritoActivity extends AppCompatActivity {
 
@@ -46,8 +50,7 @@ public class FavoritoActivity extends AppCompatActivity {
     }
 
     private void generarToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.action_bar);
-        toolbar.setTitle(getString(R.string.favoritos));
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
