@@ -47,7 +47,7 @@ public class EmailAsync extends AsyncTask<Object, Object, Object> {
             Session session = Session.getDefaultInstance(props,
                     new javax.mail.Authenticator() {
                         protected PasswordAuthentication getPasswordAuthentication() {
-                            return new PasswordAuthentication(address,pass);
+                            return new PasswordAuthentication(address, pass);
                         }
                     });
 
@@ -71,12 +71,14 @@ public class EmailAsync extends AsyncTask<Object, Object, Object> {
             Transport.send(message);
             Log.i(TAG, "Sent message successfully....");
 
+            Object ob = "Mensaje enviado.";
+            return ob;
 
         } catch (Exception e) {
             Log.e(TAG, "Mensaje no enviado", e);
+            return null;
         }
 
-        return null;
     }
 
 }

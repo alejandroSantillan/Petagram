@@ -1,10 +1,13 @@
 package alejandro.com.petagram.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+
+import java.util.concurrent.ExecutionException;
 
 import alejandro.com.petagram.R;
 import alejandro.com.petagram.async.EmailAsync;
@@ -43,8 +46,20 @@ public class ContactActivity extends AppCompatActivity {
 
         EmailAsync emailAsync = new EmailAsync();
 
-        emailAsync.execute(correo.getText().toString(),mensaje.getText().toString());
+        emailAsync.execute(correo.getText().toString(), mensaje.getText().toString());
 
+        try {
+            Object ob = emailAsync.get();
+            if (ob != null) {
+                Snackbar.make(view,ob.toString(),Snackbar.LENGTH_LONG).show();
+            }else{
+                Snackbar.make(view,"Mensaje no enviado :(",Snackbar.LENGTH_LONG).show();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
 
     }
