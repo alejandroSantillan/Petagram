@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="star"
+        android:icon="@drawable/five_star"
+        app:showAsAction="always"
+        android:id="@+id/mFavorito"
+        android:orderInCategory="10"
+        ></item>
+    <item android:id="@+id/mAbout"
+        android:title="@string/menu_about"
+        android:orderInCategory="30">
+
+    </item>
+    <item android:id="@+id/mContact"
+        android:orderInCategory="20"
+        android:title="@string/menu_contact"></item>
+</menu>
