@@ -5,6 +5,7 @@ package alejandro.com.petagram.pojo;
  */
 public class Mascota {
 
+    private int idMascota;
     private int imagen;
     private String nombre;
     private int rating;
@@ -17,6 +18,9 @@ public class Mascota {
         this.like = like;
     }
 
+    public Mascota() {
+
+    }
 
 
     public int getImagen() {
@@ -49,5 +53,13 @@ public class Mascota {
 
     public void setLike(boolean like) {
         this.like = like;
+    }
+
+    public int getIdMascota() {
+        return idMascota;
+    }
+
+    public void setIdMascota(int idMascota) {
+        this.idMascota = idMascota;
     }
 }

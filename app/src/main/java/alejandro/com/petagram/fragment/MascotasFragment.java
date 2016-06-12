@@ -10,11 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import alejandro.com.petagram.adapter.MascotaAdapter;
 import alejandro.com.petagram.R;
+import alejandro.com.petagram.adapter.MascotaAdapter;
+import alejandro.com.petagram.db.ConstructorMascota;
 import alejandro.com.petagram.pojo.Mascota;
 
 
@@ -58,19 +58,14 @@ public class MascotasFragment extends Fragment {
 
 
     private void inicarAdaptador() {
-        MascotaAdapter ma = new MascotaAdapter(mascotas);
+        MascotaAdapter ma = new MascotaAdapter(mascotas,getContext());
         vista.setAdapter(ma);
     }
 
     private void generarMascotas() {
-        mascotas = new ArrayList<>();
-        mascotas.add(new Mascota(R.drawable.leon, "León", 5, true));
-        mascotas.add(new Mascota(R.drawable.cabra, "Cabra", 3, true));
-        mascotas.add(new Mascota(R.drawable.gato, "Gato", 8, false));
-        mascotas.add(new Mascota(R.drawable.gusano, "Gusano", 2, true));
-        mascotas.add(new Mascota(R.drawable.perro, "Perro", 15, false));
-        mascotas.add(new Mascota(R.drawable.tortuga, "Tortuga", 4, true));
-        mascotas.add(new Mascota(R.drawable.tucan, "Tucán", 7, true));
+
+        ConstructorMascota cm = new ConstructorMascota(getContext());
+        mascotas = cm.obtenerDatos();
 
     }
 }

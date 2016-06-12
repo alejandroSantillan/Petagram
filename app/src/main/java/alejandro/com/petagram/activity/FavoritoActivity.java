@@ -9,8 +9,9 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.List;
 
-import alejandro.com.petagram.adapter.MascotaAdapter;
 import alejandro.com.petagram.R;
+import alejandro.com.petagram.adapter.FavoritoAdapter;
+import alejandro.com.petagram.db.ConstructorMascota;
 import alejandro.com.petagram.pojo.Mascota;
 
 public class FavoritoActivity extends AppCompatActivity {
@@ -36,17 +37,14 @@ public class FavoritoActivity extends AppCompatActivity {
 
     private void generarMascotas() {
         mascotas = new ArrayList<>();
-        mascotas.add(new Mascota(R.drawable.leon, "León", 5, true));
-        mascotas.add(new Mascota(R.drawable.cabra, "Cabra", 3, true));
-        mascotas.add(new Mascota(R.drawable.gusano, "Gusano", 2, true));
-        mascotas.add(new Mascota(R.drawable.tortuga, "Tortuga", 4, true));
-        mascotas.add(new Mascota(R.drawable.tucan, "Tucán", 7, true));
+        ConstructorMascota cm = new ConstructorMascota(getApplicationContext());
+        mascotas = cm.obtenerCincoMejoresMascotas();
 
     }
 
     private void inicarAdaptador() {
-        MascotaAdapter ma = new MascotaAdapter(mascotas);
-        vista.setAdapter(ma);
+        FavoritoAdapter fa = new FavoritoAdapter(mascotas,getApplicationContext());
+        vista.setAdapter(fa);
     }
 
     private void generarToolbar() {
