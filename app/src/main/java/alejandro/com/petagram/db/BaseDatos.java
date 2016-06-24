@@ -62,6 +62,7 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         Cursor c = db.rawQuery(sql, null);
 
+        /*
         while (c.moveToNext()) {
             Mascota mascota = new Mascota();
             mascota.setIdMascota(c.getInt(c.getColumnIndex(CBD.TABLE_MASCOTA_ID)));
@@ -71,7 +72,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             mascota.setRating(obtenerRatingMascota(mascota));
 
             mascotas.add(mascota);
-        }
+        }*/
 
         db.close();
 
@@ -131,6 +132,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         Log.i(TAG,"sql: "+sql);
         Cursor c = db.rawQuery(sql, null);
 
+        /*
         while (c.moveToNext()){
             Mascota mascota = new Mascota();
             mascota.setIdMascota(c.getInt(0));
@@ -139,7 +141,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             mascota.setImagen(c.getInt(3));
 
             mascotas.add(mascota);
-        }
+        }*/
 
         db.close();
 

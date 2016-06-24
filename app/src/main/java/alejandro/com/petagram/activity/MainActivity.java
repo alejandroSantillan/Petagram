@@ -16,7 +16,6 @@ import java.util.List;
 import alejandro.com.petagram.R;
 import alejandro.com.petagram.adapter.PageAdapter;
 import alejandro.com.petagram.fragment.InfoMascotaFragment;
-import alejandro.com.petagram.fragment.MascotasFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent contact = new Intent(MainActivity.this, ContactActivity.class);
                 startActivity(contact);
                 break;
+            case R.id.mConfigurarCuenta:
+                Intent configurar = new Intent(MainActivity.this,ConfigurarCuentaActivity.class);
+                startActivity(configurar);
+                break;
 
         }
         return true;
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Fragment> agregarFragments() {
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(new MascotasFragment());
+        //fragments.add(new MascotasFragment());
         fragments.add(new InfoMascotaFragment());
 
         return fragments;
@@ -96,6 +99,6 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_cat);
+        //tabLayout.getTabAt(1).setIcon(R.drawable.ic_cat);
     }
 }

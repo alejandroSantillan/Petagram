@@ -10,6 +10,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import alejandro.com.petagram.R;
@@ -46,9 +48,12 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaH
         Log.i(TAG, "Llenando objeto");
         final Mascota mascota = mascotas.get(position);
 
-        holder.imagen.setImageResource(mascota.getImagen());
+        Picasso.with(context)
+                .load(mascota.getImagen())
+                .placeholder(R.drawable.footprint).into(holder.imagen);
+
         holder.nombre.setText(mascota.getNombre());
-        holder.cantidad.setText(String.valueOf(mascota.getRating()));
+        holder.cantidad.setText(String.valueOf(mascota.getLikes()));
 
 
         holder.huesoLike.setOnClickListener(new View.OnClickListener() {

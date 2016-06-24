@@ -5,29 +5,34 @@ package alejandro.com.petagram.pojo;
  */
 public class Mascota {
 
-    private int idMascota;
-    private int imagen;
+    private String idMascota;
+    private String imagen;
     private String nombre;
-    private int rating;
-    private boolean like;
-
-    public Mascota( int imagen, String nombre, int rating, boolean like) {
-        this.imagen = imagen;
-        this.nombre = nombre;
-        this.rating = rating;
-        this.like = like;
-    }
+    private int likes;
 
     public Mascota() {
-
     }
 
+    public Mascota(String idMascota, String imagen, String nombre, int likes) {
+        this.idMascota = idMascota;
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.likes = likes;
+    }
 
-    public int getImagen() {
+    public String getIdMascota() {
+        return idMascota;
+    }
+
+    public void setIdMascota(String idMascota) {
+        this.idMascota = idMascota;
+    }
+
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(int imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 
@@ -39,27 +44,11 @@ public class Mascota {
         this.nombre = nombre;
     }
 
-    public int getRating() {
-        return rating;
+    public int getLikes() {
+        return likes;
     }
 
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
-
-    public boolean isLike() {
-        return like;
-    }
-
-    public void setLike(boolean like) {
-        this.like = like;
-    }
-
-    public int getIdMascota() {
-        return idMascota;
-    }
-
-    public void setIdMascota(int idMascota) {
-        this.idMascota = idMascota;
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

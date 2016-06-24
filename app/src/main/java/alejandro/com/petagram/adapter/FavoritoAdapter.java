@@ -44,11 +44,12 @@ public class FavoritoAdapter extends RecyclerView.Adapter<FavoritoAdapter.Mascot
 
         Log.i(TAG, "Llenando objeto");
         final Mascota mascota = mascotas.get(position);
-
+/*
         holder.imagen.setImageResource(mascota.getImagen());
         holder.nombre.setText(mascota.getNombre());
         holder.cantidad.setText(String.valueOf(mascota.getRating()));
 
+        */
 
     }
 

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="alejandro.com.petagram">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,31 +18,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/favoritos"
             android:name=".activity.FavoritoActivity"
+            android:label="@string/favoritos"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity" />
         </activity>
         <activity
-            android:label="@string/menu_contact"
             android:name=".activity.ContactActivity"
+            android:label="@string/menu_contact"
             android:parentActivityName=".activity.MainActivity">
-
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity" />
         </activity>
         <activity
-            android:label="@string/menu_about"
             android:name=".activity.AboutActivity"
+            android:label="@string/menu_about"
             android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity" />
-
         </activity>
+        <activity android:name=".activity.ConfigurarCuentaActivity"></activity>
     </application>
 
 </manifest>

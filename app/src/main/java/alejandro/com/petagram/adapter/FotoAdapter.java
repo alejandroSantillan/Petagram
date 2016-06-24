@@ -1,16 +1,20 @@
 package alejandro.com.petagram.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import alejandro.com.petagram.R;
-import alejandro.com.petagram.pojo.FotoMascota;
+import alejandro.com.petagram.pojo.Mascota;
 
 /**
  * Created by Alejandro on 04/06/2016.
@@ -18,15 +22,19 @@ import alejandro.com.petagram.pojo.FotoMascota;
 public class FotoAdapter extends RecyclerView.Adapter<FotoAdapter.FotoHolder> {
 
 
-    private List<FotoMascota> fotos;
+    private static final String TAG = FotoAdapter.class.getName();
+    private List<Mascota> fotos;
+    private Context context;
 
-    public FotoAdapter(List<FotoMascota> fotos) {
+    public FotoAdapter(List<Mascota> fotos, Context context) {
         this.fotos = fotos;
+        this.context = context;
     }
 
     @Override
     public FotoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
+        Log.i(TAG,"Creando la vista");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.info_mascota,parent,false);
 
         return new FotoHolder(view);
@@ -35,10 +43,15 @@ public class FotoAdapter extends RecyclerView.Adapter<FotoAdapter.FotoHolder> {
     @Override
     public void onBindViewHolder(FotoHolder holder, int position) {
 
-        FotoMascota foto = fotos.get(position);
+        Mascota foto = fotos.get(position);
+        Log.i(TAG,"foto: "+foto.getImagen());
+        Log.i(TAG,"likes: "+foto.getLikes());
 
-        holder.imagen.setImageResource(foto.getImagen());
-        holder.cantidad.setText(foto.getCantidad());
+        holder.cantidad.setText(String.valueOf(foto.getLikes()));
+        Picasso.with(context)
+                .load(foto.getImagen())
+                .placeholder(R.drawable.footprint).into(holder.imagen);
+
 
     }
 
