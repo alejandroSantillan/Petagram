@@ -69,7 +69,7 @@ public class ConfigurarCuentaActivity extends AppCompatActivity {
                     startActivity(intent);
                     ActivityCompat.finishAffinity(ConfigurarCuentaActivity.this);
                 }else{
-                    Snackbar.make(view,"No se encontro el usuario ingresado",Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(view,"No se encontró el usuario ingresado.",Snackbar.LENGTH_LONG).show();
                 }
             }
 
