@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "316519745531",
+    "firebase_url": "https://petagraminstagram.firebaseio.com",
+    "project_id": "petagraminstagram",
+    "storage_bucket": "petagraminstagram.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316519745531:android:7cd2f0659932d6eb",
+        "android_client_info": {
+          "package_name": "alejandro.com.petagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316519745531-q0oiv4fridneohgj8s3f0v7va5leespm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "alejandro.com.petagram",
+            "certificate_hash": "F07925CF10851CE380B2ECA765B875DE4DA5A5B3"
+          }
+        },
+        {
+          "client_id": "316519745531-hu0763v9c3erg7hqnsb0odc3t3viihke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfuyEbaP_AF0p1fmNNKfYwp9vEMnWV-LA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316519745531-hu0763v9c3erg7hqnsb0odc3t3viihke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

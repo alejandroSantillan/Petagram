@@ -28,6 +28,18 @@ public class RestApiAdapter {
 
     }
 
+    public EndPointApi establecerConexionRestApiFireBase() {
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ConstantesRestApi.ROOT_URL_FIREBASE)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+
+        return retrofit.create(EndPointApi.class);
+
+    }
+
     public Gson construyeGsonDeserializadorMediaRecent(){
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(MascotaResponse.class,new MascotaRecentMediaDeserializador());
@@ -42,4 +54,6 @@ public class RestApiAdapter {
 
         return   gsonBuilder.create();
     }
+
+
 }
