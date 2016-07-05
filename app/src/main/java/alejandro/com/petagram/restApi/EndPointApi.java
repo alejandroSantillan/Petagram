@@ -24,6 +24,8 @@ public interface EndPointApi {
 
     @FormUrlEncoded
     @POST(ConstantesRestApi.POST_ID_TOKEN)
-    public Call<UsuarioResponse>  registrarDispositivo(@Field("id_dispositivo") String idDispositivo,@Field("usuario_instagram") String usuarioInstagram,@Field("id_usuario_instagram") String idUsuarioInstagram);
+    public Call<UsuarioResponse>  registrarDispositivo(@Field("id_dispositivo") String idDispositivo,
+                                                       @Field("usuario_instagram") String usuarioInstagram,
+                                                       @Field("id_usuario_instagram") String idUsuarioInstagram);
 
 }
