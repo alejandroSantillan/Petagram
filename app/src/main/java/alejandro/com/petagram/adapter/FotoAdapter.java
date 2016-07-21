@@ -93,6 +93,9 @@ public class FotoAdapter extends RecyclerView.Adapter<FotoAdapter.FotoHolder> {
             @Override
             public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
                 Log.i(TAG, "notificacion enviada :D");
+                UsuarioResponse user = response.body();
+                Log.i(TAG,"ID: "+user.getId());
+                Log.i(TAG,"DISPOSITIVO: "+user.getIdDispositivo());
             }
 
             @Override

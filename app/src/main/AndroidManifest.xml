@@ -42,6 +42,23 @@
                 android:value=".activity.MainActivity" />
         </activity>
         <activity android:name=".activity.ConfigurarCuentaActivity"></activity>
+
+        <service android:name=".notification.NotificationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+
+            </intent-filter>
+
+        </service>
+
+        <receiver android:name=".receiver.LikeAnimal">
+
+            <intent-filter>
+                <action android:name="LIKE_ANIMAL"/>
+            </intent-filter>
+        </receiver>
+
+
     </application>
 
 </manifest>
